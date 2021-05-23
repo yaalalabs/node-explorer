@@ -5,6 +5,8 @@ services:
     ports:
       - "3000:80"
     restart: always
+    environment:
+      - SERVER_PORT=30363
     depends_on:
       - node-server
 
