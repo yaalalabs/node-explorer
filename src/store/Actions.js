@@ -2,7 +2,8 @@ import axios from 'axios';
 import axiosRetry from "axios-retry";
 import {toastr} from 'react-redux-toastr'
 
-export const SERVER_BASE_URL=`http://${document.location.hostname}:30363`;
+export const SERVER_PORT= `${ window._env_.SERVER_PORT}` != "" ? `${window._env_.SERVER_PORT}` : 8580;
+export const SERVER_BASE_URL=`http://${document.location.hostname}:`+SERVER_PORT;
 export const LOAD_APP_STATE = "LOAD_APP_STATE";
 export const SERVER_AWAKE = 'SERVER_AWAKE';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
