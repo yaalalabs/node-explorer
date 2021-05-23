@@ -10,9 +10,10 @@ services:
 
   node-server:
     image: kirito37/node-server:v0.1.0
+    expose:
+      - 30363
     ports:
-      - "8580:8580"
+      - "30363:8580"
     restart: always
     volumes:
       - ${CORDAPPS_PATH}:/cordapps
-    network_mode: "host"
